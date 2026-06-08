@@ -1,23 +1,35 @@
 # SystemPrevention
 
-Sistema web para **prevenção, registro e análise de golpes financeiros**, desenvolvido utilizando **Java Spring Boot**, **PostgreSQL**, **JWT**, frontend web e integração com inteligência artificial.
+Sistema web para **prevenção, registro e análise de golpes financeiros**, desenvolvido utilizando **Java Spring Boot**, **PostgreSQL**, **JWT**, frontend web responsivo e integração com inteligência artificial.
 
-O objetivo principal do sistema é permitir que usuários registrem tentativas de golpes, acompanhem suas denúncias por protocolo e tenham acesso a informações preventivas sobre golpes financeiros comuns, como falsa central de atendimento, phishing, links suspeitos, boletos falsos, QR Code falso, golpes via WhatsApp, fraudes com cartão, falso empréstimo, Pix indevido e outros tipos de fraudes bancárias.
+O objetivo do projeto é permitir que usuários registrem tentativas de golpes, acompanhem suas denúncias por protocolo e visualizem informações preventivas sobre golpes financeiros comuns.
 
 ---
 
 ## Sobre o projeto
 
-O **SystemPrevention** foi desenvolvido com foco em golpes financeiros frequentemente sofridos por usuários. A proposta é oferecer uma plataforma simples, acessível e organizada para:
+O **SystemPrevention** é uma aplicação voltada para a prevenção de golpes financeiros frequentemente sofridos por usuários.
 
-- Registrar relatos de tentativas de golpes;
-- Consultar denúncias por protocolo;
-- Exibir status da análise da denúncia;
-- Apresentar estatísticas sobre os tipos de golpes mais relatados;
-- Auxiliar usuários com dicas de prevenção;
-- Utilizar inteligência artificial para apoiar a classificação e análise dos relatos.
+A proposta do sistema é oferecer uma plataforma simples, acessível e organizada para registrar relatos de golpes, analisar informações, gerar protocolos e apresentar dados estatísticos que ajudem na conscientização e prevenção.
 
-O sistema não representa nenhuma instituição financeira específica. A identidade visual utiliza tons de vermelho como inspiração visual, mas o projeto é independente e acadêmico.
+O sistema pode ser utilizado para registrar situações como:
+
+- Falsa central de atendimento;
+- Phishing por e-mail;
+- SMS com link falso;
+- WhatsApp clonado;
+- Boleto falso;
+- QR Code falso;
+- Pix indevido;
+- Falso funcionário de banco;
+- Falso investimento;
+- Falso empréstimo;
+- Fraude com cartão;
+- Falso comprovante;
+- Links suspeitos;
+- Tentativas de roubo de dados pessoais.
+
+O projeto não representa nenhuma instituição financeira específica. A identidade visual utiliza tons de vermelho como inspiração visual, mas o sistema é independente e desenvolvido com finalidade acadêmica.
 
 ---
 
@@ -27,50 +39,60 @@ A finalidade do **SystemPrevention** é ajudar na prevenção de golpes financei
 
 Com os dados registrados, o sistema pode gerar informações úteis, como:
 
-- Quais tipos de golpes estão ocorrendo com mais frequência;
-- Quais canais são mais utilizados pelos golpistas, como SMS, ligação, WhatsApp e e-mail;
-- Quantidade de denúncias registradas;
+- Quais tipos de golpes são mais frequentes;
+- Quais canais são mais utilizados pelos golpistas;
+- Quantidade total de denúncias;
 - Status das denúncias;
-- Tendências e padrões de golpes;
-- Recomendações preventivas para os usuários.
+- Tendências de crescimento ou redução de golpes;
+- Recomendações preventivas;
+- Histórico de ocorrências registradas.
 
-Essas informações podem ajudar tanto os usuários quanto empresas, instituições ou equipes de segurança a entender melhor os riscos e criar ações preventivas.
+Essas informações podem auxiliar usuários, empresas, instituições e equipes de segurança a compreender melhor os riscos e criar ações preventivas contra fraudes financeiras.
 
 ---
 
 ## Funcionalidades principais
 
-### Cadastro e login de usuários
+### Cadastro de usuários
 
-O sistema permite que o usuário crie uma conta e faça login para acessar as funcionalidades protegidas.
+O sistema permite que o usuário crie uma conta informando seus dados básicos.
 
-A autenticação é feita com **JWT**, garantindo maior segurança no acesso às rotas privadas.
+Após o cadastro, o usuário poderá acessar áreas protegidas da aplicação.
+
+---
+
+### Login com autenticação JWT
+
+O login é feito por meio de autenticação com **JWT**.
+
+Após o usuário realizar login, o backend gera um token de acesso, que será utilizado nas requisições protegidas da API.
 
 ---
 
 ### Registro de denúncia
 
-O usuário pode relatar uma tentativa de golpe informando dados como:
+O usuário pode registrar uma tentativa de golpe informando detalhes como:
 
 - Tipo de golpe;
 - Canal de contato utilizado;
 - Descrição do ocorrido;
 - Informações relevantes para análise.
 
-Após o registro, o sistema gera um **protocolo**, que poderá ser usado para acompanhar a denúncia.
+Após o registro, o sistema gera um **protocolo** para acompanhamento.
 
 ---
 
 ### Acompanhamento por protocolo
 
-O usuário pode consultar uma denúncia utilizando o número de protocolo gerado no momento do registro.
+O usuário pode consultar uma denúncia utilizando o protocolo gerado no momento do registro.
 
-Nessa tela, é possível visualizar informações como:
+Na consulta, o sistema pode exibir:
 
-- Protocolo;
+- Número do protocolo;
 - Tipo de golpe;
 - Canal de contato;
-- Status da denúncia;
+- Descrição da denúncia;
+- Status;
 - Resultado da análise;
 - Data de registro.
 
@@ -78,27 +100,28 @@ Nessa tela, é possível visualizar informações como:
 
 ### Dashboard de estatísticas
 
-O sistema possui uma tela de estatísticas com gráficos e indicadores sobre as denúncias registradas.
+O sistema possui um dashboard com gráficos e indicadores sobre as denúncias registradas.
 
 O dashboard apresenta informações como:
 
 - Total de denúncias;
-- Denúncias concluídas;
+- Denúncias pendentes;
 - Denúncias em análise;
-- Tipos de golpes mais frequentes;
+- Denúncias concluídas;
+- Tipos de golpes mais relatados;
 - Canais de contato mais utilizados;
-- Tendência de registros por período.
+- Tendências por período.
 
 ---
 
 ### Assistente virtual
 
-O sistema também possui uma área de dúvidas e prevenção, onde o usuário pode consultar orientações sobre golpes financeiros.
+O sistema possui uma proposta de assistente virtual para auxiliar o usuário com dúvidas e orientações preventivas.
 
-A proposta do assistente é ajudar o usuário com:
+O assistente pode ajudar com:
 
 - Dicas de segurança;
-- Explicações sobre golpes;
+- Explicações sobre golpes financeiros;
 - Orientações sobre links suspeitos;
 - Cuidados com ligações falsas;
 - Recomendações sobre Pix, boletos, cartões e contas bancárias.
@@ -110,10 +133,10 @@ A proposta do assistente é ajudar o usuário com:
 ### Backend
 
 <p>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" alt="Java"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="40" alt="Spring Boot"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" width="40" alt="Maven"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="40" alt="PostgreSQL"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="45" height="45" alt="Java"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="45" height="45" alt="Spring Boot"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" width="45" height="45" alt="Maven"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="45" height="45" alt="PostgreSQL"/>
 </p>
 
 - Java
@@ -132,9 +155,9 @@ A proposta do assistente é ajudar o usuário com:
 ### Frontend
 
 <p>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" alt="HTML5"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" alt="CSS3"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" alt="JavaScript"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="45" height="45" alt="HTML5"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="45" height="45" alt="CSS3"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="45" height="45" alt="JavaScript"/>
 </p>
 
 - HTML5
@@ -150,25 +173,52 @@ A proposta do assistente é ajudar o usuário com:
 ### Banco de dados
 
 <p>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="40" alt="PostgreSQL"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="45" height="45" alt="PostgreSQL"/>
 </p>
 
 - PostgreSQL
-- PgAdmin para administração do banco
-- Dados iniciais inseridos por carga automática com `DataLoader`
+- PgAdmin
+- Spring Data JPA
+- Carga inicial de dados com `DataLoader`
 
 ---
 
 ### Ferramentas de desenvolvimento
 
 <p>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="40" alt="VS Code"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" alt="Git"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" alt="GitHub"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="40" alt="Postman"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="45" height="45" alt="VS Code"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="45" height="45" alt="Git"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="45" height="45" alt="GitHub"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="45" height="45" alt="Postman"/>
 </p>
 
-- Visual
+- Visual Studio Code
+- Git
+- GitHub
+- Postman
+- PgAdmin
+
+---
+
+### Inteligência Artificial
+
+🤖 **Groq API**
+
+- Integração planejada com Groq
+- Uso da IA para auxiliar na análise de relatos
+- Classificação de possíveis golpes
+- Apoio na geração de recomendações preventivas
+- Assistente virtual para dúvidas sobre prevenção
+
+---
+
+### Deploy
+
+🚀 **Render**
+
+- Backend hospedado no Render
+- Frontend hospedado em serviço web separado
+- API REST consumida pelo frontend através do arquivo `api.js`
 
 ---
 
@@ -191,8 +241,7 @@ SystemPrevention/
 │   │   │   │       └── config/
 │   │   │   │
 │   │   │   └── resources/
-│   │   │       ├── application.properties
-│   │   │       └── data loader
+│   │   │       └── application.properties
 │   │   │
 │   │   └── test/
 │   │
