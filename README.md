@@ -266,11 +266,12 @@ POST /api/auth/login
 
 Exemplo de body em JSON:
 
+```txt
 {
   "email": "bruno@email.com",
   "senha": "123456"
 }
-
+```
 Esse body é utilizado para autenticar o usuário no sistema. Caso o e-mail e a senha estejam corretos, a API retorna um token JWT, que deverá ser usado para acessar as rotas protegidas.
 
 Exemplo de retorno esperado:
