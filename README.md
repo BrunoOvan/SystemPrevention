@@ -342,9 +342,9 @@ Authorization: Bearer SEU_TOKEN_AQUI
 
 
 -- Consultar todas as tabelas do banco
-SELECT table_name
 
-FROM information_schema.tables
+
+SELECT table_name FROM information_schema.tables
 
 WHERE table_schema = 'public';
 
