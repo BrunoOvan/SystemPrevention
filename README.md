@@ -1,6 +1,6 @@
 # SystemPrevention
 
-Sistema web para **prevenção, registro e análise de golpes financeiros**, desenvolvido como projeto acadêmico utilizando **Java Spring Boot**, **PostgreSQL**, **JWT**, frontend web e integração com inteligência artificial.
+Sistema web para **prevenção, registro e análise de golpes financeiros**, desenvolvido utilizando **Java Spring Boot**, **PostgreSQL**, **JWT**, frontend web e integração com inteligência artificial.
 
 O objetivo principal do sistema é permitir que usuários registrem tentativas de golpes, acompanhem suas denúncias por protocolo e tenham acesso a informações preventivas sobre golpes financeiros comuns, como falsa central de atendimento, phishing, links suspeitos, boletos falsos, QR Code falso, golpes via WhatsApp, fraudes com cartão, falso empréstimo, Pix indevido e outros tipos de fraudes bancárias.
 
