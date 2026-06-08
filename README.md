@@ -295,7 +295,6 @@ Os endpoints de inteligência artificial são responsáveis pela comunicação c
 Alguns endpoints podem exigir autenticação.  
 Após realizar login, o token JWT retornado deve ser enviado no cabeçalho das requisições protegidas:
 
-```txt
 Authorization: Bearer SEU_TOKEN_AQUI
 
 
