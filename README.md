@@ -224,44 +224,6 @@ O assistente pode ajudar com:
 
 ## Estrutura geral do projeto
 
-```txt
-SystemPrevention/
-│
-├── backend/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/systemprevention/
-│   │   │   │       ├── controller/
-│   │   │   │       ├── service/
-│   │   │   │       ├── repository/
-│   │   │   │       ├── model/
-│   │   │   │       ├── dto/
-│   │   │   │       ├── security/
-│   │   │   │       └── config/
-│   │   │   │
-│   │   │   └── resources/
-│   │   │       └── application.properties
-│   │   │
-│   │   └── test/
-│   │
-│   └── pom.xml
-│
-├── frontend/
-│   ├── index.html
-│   ├── login.html
-│   ├── cadastro.html
-│   ├── dashboard.html
-│   ├── relatar.html
-│   ├── acompanhar.html
-│   ├── duvidas.html
-│   ├── contato.html
-│   ├── css/
-│   └── js/
-│
-└── README.md
-
-
 ## Endpoints da API
 
 A API do **SystemPrevention** está organizada em grupos de endpoints, cada um com uma responsabilidade específica dentro do sistema.
@@ -336,4 +298,43 @@ Após realizar login, o token JWT retornado deve ser enviado no cabeçalho das r
 ```txt
 Authorization: Bearer SEU_TOKEN_AQUI
 
+
+
+
+```txt
+SystemPrevention/
+│
+├── backend/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/systemprevention/
+│   │   │   │       ├── controller/
+│   │   │   │       ├── service/
+│   │   │   │       ├── repository/
+│   │   │   │       ├── model/
+│   │   │   │       ├── dto/
+│   │   │   │       ├── security/
+│   │   │   │       └── config/
+│   │   │   │
+│   │   │   └── resources/
+│   │   │       └── application.properties
+│   │   │
+│   │   └── test/
+│   │
+│   └── pom.xml
+│
+├── frontend/
+│   ├── index.html
+│   ├── login.html
+│   ├── cadastro.html
+│   ├── dashboard.html
+│   ├── relatar.html
+│   ├── acompanhar.html
+│   ├── duvidas.html
+│   ├── contato.html
+│   ├── css/
+│   └── js/
+│
+└── README.md
 
