@@ -260,3 +260,80 @@ SystemPrevention/
 │   └── js/
 │
 └── README.md
+
+
+## Endpoints da API
+
+A API do **SystemPrevention** está organizada em grupos de endpoints, cada um com uma responsabilidade específica dentro do sistema.
+
+---
+
+### Autenticação
+
+Os endpoints de autenticação são responsáveis pelo cadastro e login dos usuários no sistema. Eles permitem criar uma conta, acessar a aplicação e gerar o token JWT usado nas rotas protegidas.
+
+- **POST `/api/auth/register`**  
+  Cadastra um novo usuário no sistema, salvando nome, e-mail e senha criptografada no banco de dados.
+
+- **POST `/api/auth/login`**  
+  Realiza o login do usuário. Se os dados estiverem corretos, retorna um token JWT para autenticar as próximas requisições.
+
+---
+
+### Denúncias
+
+Os endpoints de denúncias são responsáveis pelo registro, listagem e consulta das tentativas de golpes financeiros relatadas pelos usuários.
+
+- **POST `/api/denuncias`**  
+  Registra uma nova denúncia ou tentativa de golpe no sistema. Após o cadastro, o sistema gera um protocolo para acompanhamento.
+
+- **GET `/api/denuncias`**  
+  Lista as denúncias cadastradas no sistema. Pode ser usado para testes, consulta geral ou área administrativa.
+
+- **GET `/api/denuncias/minhas`**  
+  Lista somente as denúncias feitas pelo usuário autenticado. Para funcionar, precisa do token JWT.
+
+- **GET `/api/denuncias/protocolo/{protocolo}`**  
+  Consulta uma denúncia específica pelo protocolo gerado no momento do registro.
+
+---
+
+### Dashboard
+
+Os endpoints do dashboard são responsáveis por fornecer dados estatísticos sobre as denúncias registradas no sistema. Eles alimentam os cards e gráficos da tela de estatísticas.
+
+- **GET `/api/dashboard/resumo`**  
+  Retorna um resumo geral das denúncias, como total registrado, pendentes, em análise e concluídas.
+
+- **GET `/api/dashboard/tipos`**  
+  Retorna a quantidade de denúncias agrupadas por tipo de golpe, como falsa central, phishing, boleto falso e outros.
+
+- **GET `/api/dashboard/canais`**  
+  Retorna a quantidade de denúncias agrupadas por canal de contato, como ligação, SMS, WhatsApp e e-mail.
+
+- **GET `/api/dashboard/tendencias`**  
+  Retorna dados de evolução das denúncias por período, permitindo visualizar o crescimento ou redução dos registros.
+
+---
+
+### Inteligência Artificial
+
+Os endpoints de inteligência artificial são responsáveis pela comunicação com o assistente virtual do sistema. Eles auxiliam o usuário com dúvidas, dicas de prevenção e análise guiada de relatos.
+
+- **POST `/api/ia/chat`**  
+  Envia uma mensagem para o assistente virtual responder dúvidas sobre golpes financeiros e orientar o usuário com dicas de prevenção.
+
+- **POST `/api/ia/delta`**  
+  Envia mensagens para o fluxo guiado da IA DELTA, usado para coletar informações sobre uma possível tentativa de golpe de forma conversacional.
+
+---
+
+### Autorização JWT
+
+Alguns endpoints podem exigir autenticação.  
+Após realizar login, o token JWT retornado deve ser enviado no cabeçalho das requisições protegidas:
+
+```txt
+Authorization: Bearer SEU_TOKEN_AQUI
+
+
