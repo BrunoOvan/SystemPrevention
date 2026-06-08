@@ -36,7 +36,7 @@ public class SecurityConfig {
                         // Denúncias protegidas
                         .requestMatchers(HttpMethod.GET, "/api/denuncias/minhas").authenticated()
                         .requestMatchers(HttpMethod.POST, "/api/denuncias").authenticated()
-
+                        .requestMatchers("/api/dashboard/**").authenticated()
                         // Consultas públicas/agregadas
                         .requestMatchers("/api/dashboard/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/denuncias/protocolo/**").permitAll()
