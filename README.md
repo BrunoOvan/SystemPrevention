@@ -109,6 +109,13 @@ A proposta do assistente é ajudar o usuário com:
 
 ### Backend
 
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" alt="Java"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="40" alt="Spring Boot"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" width="40" alt="Maven"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="40" alt="PostgreSQL"/>
+</p>
+
 - Java
 - Spring Boot
 - Spring Web
@@ -124,6 +131,12 @@ A proposta do assistente é ajudar o usuário com:
 
 ### Frontend
 
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" alt="HTML5"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" alt="CSS3"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" alt="JavaScript"/>
+</p>
+
 - HTML5
 - CSS3
 - JavaScript
@@ -136,26 +149,26 @@ A proposta do assistente é ajudar o usuário com:
 
 ### Banco de dados
 
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="40" alt="PostgreSQL"/>
+</p>
+
 - PostgreSQL
 - PgAdmin para administração do banco
 - Dados iniciais inseridos por carga automática com `DataLoader`
 
 ---
 
-### Inteligência Artificial
+### Ferramentas de desenvolvimento
 
-- Integração planejada com Groq
-- Uso da IA para auxiliar na análise de relatos
-- Classificação de possíveis golpes
-- Apoio na geração de recomendações preventivas
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="40" alt="VS Code"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" alt="Git"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" alt="GitHub"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="40" alt="Postman"/>
+</p>
 
----
-
-### Deploy
-
-- Backend hospedado no Render
-- Frontend hospedado em serviço web separado
-- API REST consumida pelo frontend via arquivo `api.js`
+- Visual
 
 ---
 
