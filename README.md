@@ -341,6 +341,20 @@ Após realizar login, o token JWT retornado deve ser enviado no cabeçalho das r
 Authorization: Bearer SEU_TOKEN_AQUI
 
 
+-- Consultar todas as tabelas do banco
+SELECT table_name
+FROM information_schema.tables
+WHERE table_schema = 'public';
+
+-- Consultar todos os usuários cadastrados
+SELECT * FROM usuarios;
+
+-- Consultar todas as denúncias registradas
+SELECT * FROM denuncias;
+
+-- Consultar denúncias mais recentes
+SELECT *
+FROM denuncias
 
 
 ```txt
