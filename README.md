@@ -248,11 +248,13 @@ POST /api/auth/register
 
 Exemplo de body em JSON:
 
+```txt
 {
   "nome": "Bruno",
   "email": "bruno@email.com",
   "senha": "123456"
 }
+```
 
 Esse body é utilizado para criar uma nova conta no sistema. O campo "nome" armazena o nome do usuário, o campo "email" será usado para login e o campo "senha" será salvo de forma criptografada no banco de dados.
 
