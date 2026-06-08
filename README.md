@@ -240,6 +240,49 @@ Os endpoints de autenticação são responsáveis pelo cadastro e login dos usu�
 - **POST `/api/auth/login`**  
   Realiza o login do usuário. Se os dados estiverem corretos, retorna um token JWT para autenticar as próximas requisições.
 
+Body para cadastro de usuário
+
+Endpoint:
+
+POST /api/auth/register
+
+Exemplo de body em JSON:
+
+{
+  "nome": "Bruno",
+  "email": "bruno@email.com",
+  "senha": "123456"
+}
+
+Esse body é utilizado para criar uma nova conta no sistema. O campo "nome" armazena o nome do usuário, o campo "email" será usado para login e o campo "senha" será salvo de forma criptografada no banco de dados.
+
+---
+
+Body para login de usuário
+
+Endpoint:
+
+POST /api/auth/login
+
+Exemplo de body em JSON:
+
+{
+  "email": "bruno@email.com",
+  "senha": "123456"
+}
+
+Esse body é utilizado para autenticar o usuário no sistema. Caso o e-mail e a senha estejam corretos, a API retorna um token JWT, que deverá ser usado para acessar as rotas protegidas.
+
+Exemplo de retorno esperado:
+
+{
+  "token": "SEU_TOKEN_JWT_AQUI"
+}
+
+Depois do login, o token deve ser enviado no cabeçalho das próximas requisições protegidas:
+
+Authorization: Bearer SEU_TOKEN_JWT_AQUI
+
 ---
 
 ### Denúncias
