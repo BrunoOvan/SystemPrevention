@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SystemPrevention - Dashboard</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <aside class="sidebar"></aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Dashboard / Estatísticas</h1>
+          <p>Visão geral das denúncias registradas</p>
+        </div>
+
+        <div class="topbar-icons">
+          <button class="icon-button notification" type="button" aria-label="Notificações">
+            <i data-lucide="bell"></i>
+            <span>3</span>
+          </button>
+
+          <button class="icon-button" type="button" aria-label="Perfil do usuário">
+            <i data-lucide="circle-user-round"></i>
+          </button>
+        </div>
+      </header>
+
+      <section class="cards-grid">
+        <article class="metric-card">
+          <div class="metric-icon red">
+            <i data-lucide="file-warning"></i>
+          </div>
+
+          <div>
+            <span>Total de denúncias</span>
+            <h2 id="totalDenuncias">--</h2>
+            <p id="variacaoTotal">Aguardando dados da API</p>
+          </div>
+        </article>
+
+        <article class="metric-card">
+          <div class="metric-icon purple">
+            <i data-lucide="briefcase"></i>
+          </div>
+
+          <div>
+            <span>Casos analisados</span>
+            <h2 id="casosAnalisados">--</h2>
+            <p id="variacaoAnalisados">Aguardando dados da API</p>
+          </div>
+        </article>
+
+        <article class="metric-card">
+          <div class="metric-icon danger">
+            <i data-lucide="triangle-alert"></i>
+          </div>
+
+          <div>
+            <span>Denúncias de risco alto</span>
+            <h2 id="riscoAlto">--</h2>
+            <p id="variacaoRisco">Aguardando dados da API</p>
+          </div>
+        </article>
+
+        <article class="metric-card">
+          <div class="metric-icon orange">
+            <i data-lucide="star"></i>
+          </div>
+
+          <div>
+            <span>Golpe mais relatado</span>
+            <h2 class="small-title" id="golpeMaisRelatado">--</h2>
+            <p id="percentualGolpe">Aguardando dados da API</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel large">
+          <h3>Tipos de golpe mais relatados</h3>
+
+          <div class="chart-container">
+            <canvas id="chartTiposGolpe"></canvas>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>Canal utilizado</h3>
+
+          <div class="chart-container">
+            <canvas id="chartCanais"></canvas>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>Denúncias por mês</h3>
+
+          <div class="chart-container">
+            <canvas id="chartMensal"></canvas>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>Status das denúncias</h3>
+
+          <div class="empty-status" id="statusDenuncias">
+            <div>
+              <span>Pendente</span>
+              <strong id="statusPendente">--</strong>
+            </div>
+
+            <div>
+              <span>Em análise</span>
+              <strong id="statusAnalise">--</strong>
+            </div>
+
+            <div>
+              <span>Concluído</span>
+              <strong id="statusConcluido">--</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>Tendências identificadas</h3>
+
+          <div class="empty-state" id="tendenciasDashboard">
+            <i data-lucide="activity"></i>
+            <h4>Nenhuma tendência identificada</h4>
+            <p>
+              Após o registro das denúncias, o sistema poderá indicar padrões de golpes mais frequentes.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <footer class="page-footer">
+        Dados carregados a partir da API do SystemPrevention.
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="js/auth.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dashboard-page.js"></script>
+
+  <script>
+    carregarSidebar("dashboard");
+    carregarMenuMobile();
+    protegerPagina();
+  </script>
+</body>
+
+</html>

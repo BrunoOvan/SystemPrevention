@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SystemPrevention - Acompanhar Denúncia</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app-layout">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <i data-lucide="shield"></i>
+        <span>SystemPrevention</span>
+      </div>
+
+      <nav class="menu">
+        <a href="index.html">
+          <i data-lucide="home"></i>
+          <span>Início</span>
+        </a>
+
+        <a href="relatar-golpe.html">
+          <i data-lucide="message-square-warning"></i>
+          <span>Relatar Golpe</span>
+        </a>
+
+        <a href="acompanhar-denuncia.html" class="active">
+          <i data-lucide="search-check"></i>
+          <span>Acompanhar Denúncia</span>
+        </a>
+
+        <a href="dashboard.html">
+          <i data-lucide="bar-chart-3"></i>
+          <span>Dashboard / Estatísticas</span>
+        </a>
+
+        <a href="historico.html">
+          <i data-lucide="clock-3"></i>
+          <span>Histórico</span>
+        </a>
+
+        <a href="login.html">
+          <i data-lucide="user"></i>
+          <span>Login / Cadastro</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-card">
+        <i data-lucide="shield-alert"></i>
+        <h3>Juntos contra os golpes</h3>
+        <p>Sua denúncia ajuda a proteger outras pessoas.</p>
+        <a href="#">Saiba mais →</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Acompanhar Denúncia</h1>
+          <p>Consulte o andamento da sua denúncia usando o protocolo gerado</p>
+        </div>
+
+        <div class="topbar-icons">
+          <button class="icon-button notification">
+            <i data-lucide="bell"></i>
+            <span>3</span>
+          </button>
+
+          <button class="icon-button">
+            <i data-lucide="circle-user-round"></i>
+          </button>
+        </div>
+      </header>
+
+      <section class="tracking-layout">
+
+        <article class="tracking-card">
+          <div class="tracking-icon">
+            <i data-lucide="search-check"></i>
+          </div>
+
+          <h2>Consultar protocolo</h2>
+          <p>
+            Digite o protocolo recebido após o registro da denúncia para acompanhar
+            o status da análise.
+          </p>
+
+          <form class="tracking-form">
+            <label for="protocoloConsulta">Protocolo da denúncia</label>
+
+            <div class="tracking-input">
+              <input
+                type="text"
+                id="protocoloConsulta"
+                placeholder="Ex.: SP-2026-00124"
+                autocomplete="off"
+                maxlength="13"
+                required
+              />
+              <button type="button">
+                <i data-lucide="search"></i>
+                Consultar
+              </button>
+            </div>
+          </form>
+
+          <div class="tracking-empty">
+            <i data-lucide="file-search"></i>
+            <h3>Nenhuma consulta realizada</h3>
+            <p>
+              Após a integração com o backend, o resultado da denúncia será exibido aqui.
+            </p>
+          </div>
+        </article>
+
+        <aside class="tracking-side">
+          <div class="info-card">
+            <h3>O que você poderá acompanhar?</h3>
+
+            <ul class="check-list">
+              <li><i data-lucide="check"></i> Status da denúncia</li>
+              <li><i data-lucide="check"></i> Tipo provável do golpe</li>
+              <li><i data-lucide="check"></i> Nível de risco identificado</li>
+              <li><i data-lucide="check"></i> Recomendação preventiva</li>
+              <li><i data-lucide="check"></i> Data de registro</li>
+            </ul>
+          </div>
+
+          <div class="info-card warning">
+            <i data-lucide="info"></i>
+            <h3>Atenção</h3>
+            <p>
+              O SystemPrevention não solicita senhas, códigos de autenticação,
+              token bancário ou número completo do cartão.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Status possíveis</h3>
+
+            <div class="status-explanation">
+              <div>
+                <span class="status-dot pending"></span>
+                <strong>Pendente</strong>
+                <p>Denúncia registrada e aguardando análise.</p>
+              </div>
+
+              <div>
+                <span class="status-dot analysis"></span>
+                <strong>Em análise</strong>
+                <p>O sistema está processando as informações.</p>
+              </div>
+
+              <div>
+                <span class="status-dot done"></span>
+                <strong>Concluído</strong>
+                <p>A análise foi finalizada e já pode ser consultada.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </section>
+    </main>
+  </div>
+
+<script src="js/auth.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/mobile-menu.js"></script>
+<script src="js/api.js"></script>
+<script src="js/denuncias.js"></script>
+<script src="js/main.js"></script>
+<script src="js/acompanhar.js"></script>
+
+<script>
+  carregarSidebar("acompanhar");
+  carregarMenuMobile();
+  protegerPagina();
+</script>
+</body>
+</html>

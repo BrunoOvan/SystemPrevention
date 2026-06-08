@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SystemPrevention - Login</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <aside class="sidebar"></aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Login / Cadastro</h1>
+          <p>Acesse sua conta para registrar e acompanhar denúncias</p>
+        </div>
+
+        <div class="topbar-icons">
+          <button class="icon-button notification" type="button" aria-label="Notificações">
+            <i data-lucide="bell"></i>
+            <span>3</span>
+          </button>
+
+          <button class="icon-button" type="button" aria-label="Perfil do usuário">
+            <i data-lucide="circle-user-round"></i>
+          </button>
+        </div>
+      </header>
+
+      <section class="auth-layout">
+
+        <article class="auth-card">
+          <div class="auth-icon">
+            <i data-lucide="log-in"></i>
+          </div>
+
+          <h2>Entrar na conta</h2>
+          <p>Informe seus dados para acessar o SystemPrevention.</p>
+
+          <form class="auth-form" id="loginForm">
+            <div class="field-group">
+              <label for="loginEmail">E-mail</label>
+              <input
+                type="email"
+                id="loginEmail"
+                placeholder="Digite seu e-mail"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="loginSenha">Senha</label>
+              <input
+                type="password"
+                id="loginSenha"
+                placeholder="Digite sua senha"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+
+            <button type="submit" class="primary-button">
+              <i data-lucide="log-in"></i>
+              Entrar
+            </button>
+          </form>
+
+          <div class="auth-note">
+            <i data-lucide="lock-keyhole"></i>
+            <span>O login retorna um token JWT para acessar recursos protegidos do sistema.</span>
+          </div>
+        </article>
+
+        <article class="auth-card">
+          <div class="auth-icon secondary">
+            <i data-lucide="user-plus"></i>
+          </div>
+
+          <h2>Criar cadastro</h2>
+          <p>Crie sua conta para registrar denúncias e acompanhar protocolos.</p>
+
+          <form class="auth-form" id="cadastroForm">
+            <div class="field-group">
+              <label for="cadastroNome">Nome completo</label>
+              <input
+                type="text"
+                id="cadastroNome"
+                placeholder="Digite seu nome"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="cadastroEmail">E-mail</label>
+              <input
+                type="email"
+                id="cadastroEmail"
+                placeholder="Digite seu e-mail"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="cadastroSenha">Senha</label>
+              <input
+                type="password"
+                id="cadastroSenha"
+                placeholder="Crie uma senha"
+                autocomplete="new-password"
+                minlength="6"
+                required
+              />
+            </div>
+
+            <button type="submit" class="primary-button">
+              <i data-lucide="user-plus"></i>
+              Criar conta
+            </button>
+          </form>
+
+          <div class="auth-note">
+            <i data-lucide="shield-check"></i>
+            <span>As senhas são criptografadas no backend com Spring Security.</span>
+          </div>
+        </article>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/cadastro.js"></script>
+
+  <script>
+    carregarSidebar("login");
+    carregarMenuMobile();
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>

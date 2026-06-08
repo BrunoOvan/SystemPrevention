@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SystemPrevention - Dúvidas Frequentes</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <aside class="sidebar"></aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Dúvidas Frequentes</h1>
+          <p>Orientações rápidas sobre golpes financeiros, denúncias e uso do sistema</p>
+        </div>
+      </header>
+
+      <section class="faq-layout">
+
+        <article class="faq-card faq-highlight">
+          <div class="faq-icon">
+            <i data-lucide="shield-alert"></i>
+          </div>
+
+          <div>
+            <h2>Antes de tudo: proteja seus dados</h2>
+            <p>
+              O SystemPrevention não solicita senhas, tokens, códigos de autenticação,
+              número completo do cartão ou dados bancários sensíveis. Use o sistema apenas
+              para relatar o ocorrido e acompanhar o protocolo.
+            </p>
+          </div>
+        </article>
+
+        <section class="faq-grid">
+
+          <article class="faq-card">
+            <h3>O que é o SystemPrevention?</h3>
+            <p>
+              É uma plataforma para registrar, acompanhar e analisar tentativas de golpes
+              financeiros. O sistema ajuda a identificar padrões, canais mais usados e tipos
+              de golpes mais recorrentes.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>O que é a agente DELTA?</h3>
+            <p>
+              A DELTA é a assistente virtual do sistema. Ela conduz o relato por perguntas
+              guiadas, ajudando o usuário a registrar a tentativa de golpe de forma mais clara
+              e organizada.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Como registrar uma tentativa de golpe?</h3>
+            <p>
+              Acesse a página “Relatar Golpe”, informe o canal do contato suspeito e responda
+              às perguntas da DELTA. Ao final, o sistema gera um protocolo para acompanhamento.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Como acompanhar uma denúncia?</h3>
+            <p>
+              Após registrar uma denúncia, copie o protocolo gerado e acesse “Acompanhar Denúncia”.
+              Digite o protocolo para consultar status, tipo identificado, nível de risco e recomendação.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>O que fazer se recebi um link suspeito?</h3>
+            <p>
+              Não clique no link. Verifique o remetente, não informe dados pessoais e acesse apenas
+              os canais oficiais da instituição. Em caso de dúvida, registre o ocorrido no sistema.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>O que fazer se informei dados por engano?</h3>
+            <p>
+              Entre em contato imediatamente com a instituição financeira pelos canais oficiais,
+              altere senhas, bloqueie cartões se necessário e acompanhe movimentações suspeitas.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Quais golpes podem ser relatados?</h3>
+            <p>
+              Falsa central de atendimento, phishing, SMS falso, boleto falso, cobrança falsa,
+              golpe por WhatsApp, falso empréstimo, pedido de token, Pix indevido e outros casos suspeitos.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>O dashboard mostra meus dados pessoais?</h3>
+            <p>
+              Não. O dashboard exibe dados agregados do sistema, como tipos de golpes mais relatados,
+              canais utilizados e níveis de risco. O histórico detalhado fica vinculado à conta logada.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Preciso estar logado para usar o sistema?</h3>
+            <p>
+              Para registrar denúncias e consultar seu histórico, sim. Já a consulta por protocolo
+              e as orientações de prevenção podem ser acessadas de forma mais aberta.
+            </p>
+          </article>
+
+        </section>
+
+        <article class="faq-card faq-warning">
+          <div class="faq-icon">
+            <i data-lucide="triangle-alert"></i>
+          </div>
+
+          <div>
+            <h2>Em caso de prejuízo financeiro</h2>
+            <p>
+              Procure imediatamente sua instituição financeira pelos canais oficiais, registre boletim
+              de ocorrência quando necessário e salve evidências como prints, mensagens, números de telefone,
+              e-mails, links e comprovantes.
+            </p>
+          </div>
+        </article>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    carregarSidebar("duvidas");
+    carregarMenuMobile();
+
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

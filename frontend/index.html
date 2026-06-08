@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SystemPrevention - Início</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app-layout">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <i data-lucide="shield"></i>
+        <span>SystemPrevention</span>
+      </div>
+
+      <nav class="menu">
+        <a href="index.html" class="active">
+          <i data-lucide="home"></i>
+          <span>Início</span>
+        </a>
+
+        <a href="relatar-golpe.html">
+          <i data-lucide="message-square-warning"></i>
+          <span>Relatar Golpe</span>
+        </a>
+
+        <a href="acompanhar-denuncia.html">
+          <i data-lucide="search-check"></i>
+          <span>Acompanhar Denúncia</span>
+        </a>
+
+        <a href="dashboard.html">
+          <i data-lucide="bar-chart-3"></i>
+          <span>Dashboard / Estatísticas</span>
+        </a>
+
+        <a href="historico.html">
+          <i data-lucide="clock-3"></i>
+          <span>Histórico</span>
+        </a>
+
+        <a href="login.html">
+          <i data-lucide="user"></i>
+          <span>Login / Cadastro</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-card">
+        <i data-lucide="shield-alert"></i>
+        <h3>Juntos contra os golpes</h3>
+        <p>Sua denúncia ajuda a proteger outras pessoas.</p>
+        <a href="#">Saiba mais →</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>SystemPrevention</h1>
+          <p>Plataforma de prevenção, registro e análise de golpes financeiros</p>
+        </div>
+
+      <div class="topbar-icons">
+        <button class="icon-button notification" type="button" aria-label="Notificações">
+          <i data-lucide="bell"></i>
+          <span>3</span>
+        </button>
+
+        <button class="icon-button" type="button" aria-label="Perfil do usuário">
+          <i data-lucide="circle-user-round"></i>
+        </button>
+        </div>
+      </header>
+
+      <section class="home-hero">
+        <div class="hero-content">
+          <span class="hero-badge">
+            <i data-lucide="shield-check"></i>
+            Prevenção inteligente contra golpes
+          </span>
+
+          <h2>Registre tentativas de golpe e acompanhe a análise pelo protocolo</h2>
+
+          <p>
+            O SystemPrevention ajuda usuários a relatarem contatos suspeitos, registrar denúncias
+            e acompanhar análises de risco relacionadas a golpes financeiros, como falsa central
+            bancária, phishing, falso boleto e golpe do Pix.
+          </p>
+
+          
+        </div>
+
+       
+
+      <section class="home-grid">
+        <article class="home-card">
+          <div class="home-card-icon">
+            <i data-lucide="file-warning"></i>
+          </div>
+          <h3>Registro de denúncias</h3>
+          <p>
+            O usuário poderá registrar tentativas de golpe financeiro por meio de um fluxo guiado.
+          </p>
+        </article>
+
+        <article class="home-card">
+          <div class="home-card-icon">
+            <i data-lucide="search-check"></i>
+          </div>
+          <h3>Acompanhamento por protocolo</h3>
+          <p>
+            Cada denúncia terá um protocolo para consulta do status e resultado da análise.
+          </p>
+        </article>
+
+        <article class="home-card">
+          <div class="home-card-icon">
+            <i data-lucide="bar-chart-3"></i>
+          </div>
+          <h3>Dashboard estatístico</h3>
+          <p>
+            O sistema exibirá indicadores sobre tipos de golpe, canais utilizados e níveis de risco.
+          </p>
+        </article>
+
+        <article class="home-card">
+          <div class="home-card-icon">
+            <i data-lucide="lock-keyhole"></i>
+          </div>
+          <h3>Segurança com JWT</h3>
+          <p>
+            O acesso aos recursos protegidos será controlado com autenticação e token JWT.
+          </p>
+        </article>
+      </section>
+
+      <section class="home-warning">
+        <div>
+          <i data-lucide="triangle-alert"></i>
+        </div>
+
+        <div>
+          <h3>Orientação de segurança</h3>
+          <p>
+            O SystemPrevention não solicita senhas, códigos de autenticação, token bancário,
+            número completo de cartão ou dados sensíveis. O sistema serve para registrar relatos
+            e auxiliar na prevenção contra golpes.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+<script src="js/auth.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/mobile-menu.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+  carregarSidebar("inicio");
+  carregarMenuMobile();
+  lucid.createIcons();
+</script>
+</body>
+</html>

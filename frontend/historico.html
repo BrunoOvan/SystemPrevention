@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SystemPrevention - Histórico</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app-layout">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <i data-lucide="shield"></i>
+        <span>SystemPrevention</span>
+      </div>
+
+      <nav class="menu">
+        <a href="index.html">
+          <i data-lucide="home"></i>
+          <span>Início</span>
+        </a>
+
+        <a href="relatar-golpe.html">
+          <i data-lucide="message-square-warning"></i>
+          <span>Relatar Golpe</span>
+        </a>
+
+        <a href="acompanhar-denuncia.html">
+          <i data-lucide="search-check"></i>
+          <span>Acompanhar Denúncia</span>
+        </a>
+
+        <a href="dashboard.html">
+          <i data-lucide="bar-chart-3"></i>
+          <span>Dashboard / Estatísticas</span>
+        </a>
+
+        <a href="historico.html" class="active">
+          <i data-lucide="clock-3"></i>
+          <span>Histórico</span>
+        </a>
+
+        <a href="login.html">
+          <i data-lucide="user"></i>
+          <span>Login / Cadastro</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-card">
+        <i data-lucide="shield-alert"></i>
+        <h3>Juntos contra os golpes</h3>
+        <p>Sua denúncia ajuda a proteger outras pessoas.</p>
+        <a href="#">Saiba mais →</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Histórico de Denúncias</h1>
+          <p>Acompanhe os registros enviados pelo sistema</p>
+        </div>
+
+        <div class="topbar-icons">
+          <button class="icon-button notification">
+            <i data-lucide="bell"></i>
+            <span>3</span>
+          </button>
+
+          <button class="icon-button">
+            <i data-lucide="circle-user-round"></i>
+          </button>
+        </div>
+      </header>
+
+      <section class="filter-card">
+        <div class="field-group">
+          <label for="protocolo">Buscar por protocolo</label>
+          <div class="input-icon">
+            <input 
+              type="text" 
+              id="protocolo" 
+              placeholder="Ex.: SP-2026-00124"
+              autocomplete="off"
+              maxlength="13"
+            />
+            <i data-lucide="search"></i>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="status">Status</label>
+          <select id="status">
+            <option value="">Todos</option>
+            <option value="PENDENTE">Pendente</option>
+            <option value="EM_ANALISE">Em análise</option>
+            <option value="CONCLUIDO">Concluído</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="tipoGolpe">Tipo de golpe</label>
+          <select id="tipoGolpe">
+  <option value="">Todos</option>
+  <option value="FALSA_CENTRAL_ATENDIMENTO">Falsa central de atendimento</option>
+  <option value="FALSO_ALERTA_SEGURANCA">Falso alerta de segurança</option>
+  <option value="FALSO_BLOQUEIO_CONTA">Falso bloqueio de conta</option>
+  <option value="FALSA_REGULARIZACAO_CONTA">Falsa regularização de conta</option>
+  <option value="PHISHING_LINK_FALSO">Phishing / link falso</option>
+  <option value="SITE_FALSO_BANCO">Site falso do banco</option>
+  <option value="SMISHING_SMS_FALSO">SMS falso</option>
+  <option value="GOLPE_WHATSAPP">Golpe via WhatsApp</option>
+  <option value="GOLPE_PIX">Golpe do Pix</option>
+  <option value="FALSO_COMPROVANTE_PIX">Falso comprovante Pix</option>
+  <option value="FALSA_DEVOLUCAO_PIX">Falsa devolução Pix</option>
+  <option value="FALSO_BOLETO">Falso boleto</option>
+  <option value="FALSA_RENEGOCIACAO_DIVIDA">Falsa renegociação de dívida</option>
+  <option value="FALSA_COBRANCA_BANCARIA">Falsa cobrança bancária</option>
+  <option value="COMPRA_NAO_RECONHECIDA">Compra não reconhecida</option>
+  <option value="CARTAO_CLONADO">Cartão clonado</option>
+  <option value="USO_INDEVIDO_CARTAO">Uso indevido do cartão</option>
+  <option value="TROCA_OU_RETENCAO_CARTAO">Troca ou retenção de cartão</option>
+  <option value="FALSA_ATUALIZACAO_CADASTRAL">Falsa atualização cadastral</option>
+  <option value="FALSO_TOKEN_OU_CODIGO">Falso token ou código</option>
+  <option value="FALSO_SUPORTE_TECNICO">Falso suporte técnico</option>
+  <option value="INSTALACAO_APP_MALICIOSO">Instalação de app malicioso</option>
+  <option value="FALSO_EMPRESTIMO">Falso empréstimo</option>
+  <option value="ROUBO_CELULAR_ACESSO_CONTA">Roubo de celular / acesso à conta</option>
+  <option value="ENGENHARIA_SOCIAL">Engenharia social</option>
+  <option value="OUTRO">Outro</option>
+</select>
+        </div>
+
+        <button class="outline-button">
+          <i data-lucide="filter-x"></i>
+          Limpar filtros
+        </button>
+      </section>
+
+      <section class="table-card">
+        <div class="table-header">
+          <h3>Registros encontrados</h3>
+          <span>Aguardando integração com o backend</span>
+        </div>
+
+        <div class="empty-table">
+          <i data-lucide="inbox"></i>
+          <h4>Nenhuma denúncia encontrada</h4>
+          <p>
+            Quando o backend estiver integrado, as denúncias registradas aparecerão aqui
+            com protocolo, data, tipo de golpe, canal, nível de risco e status.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+<script src="js/auth.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/mobile-menu.js"></script>
+<script src="js/api.js"></script>
+<script src="js/denuncias.js"></script>
+<script src="js/main.js"></script>
+<script src="js/historico.js"></script>
+
+<script>
+  carregarSidebar("historico");
+  carregarMenuMobile();
+  protegerPagina();
+</script>
+</body>
+</html>
